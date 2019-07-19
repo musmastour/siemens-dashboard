@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgModule } from '@angular/core';
-import { DataService } from '../data-service.service';
+import { DataService } from '../dataService/dataService';
 import Chart from 'chart.js';
 
 

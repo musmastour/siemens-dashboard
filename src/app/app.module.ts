@@ -6,7 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component'
 import { HeaderComponent } from './header/header.component'
-import { DataService } from './data-service.service';
+import { DataService } from './dataService/dataService';
 
 @NgModule({
   declarations: [
