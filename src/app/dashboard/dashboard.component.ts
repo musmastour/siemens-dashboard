@@ -31,6 +31,7 @@ export class DashboardComponent implements OnInit {
   // public chartHours;
 
     ngOnInit(){
+      
       this.chartColor = "#FFFFFF";
 
       var speedCanvas = document.getElementById("speedChart");

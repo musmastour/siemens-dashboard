@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'https://data-vizualizer-siemens.herokuapp.com/get/'
+  apiUrl: 'https://data-vizualizer-siemens.herokuapp.com'
 }
   ;
 /*
