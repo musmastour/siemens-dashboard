@@ -1,13 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgModule } from '@angular/core';
+import { DataService } from '../data-service.service';
 import Chart from 'chart.js';
-import { HttpClient, HttpHeaders, HttpHandler } from '@angular/common/http'
-import { HttpClientComponent } from './../httpClient/httpClient.component'
-
-
-const httpOptions = {
-  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-};
 
 
 @Component({
@@ -15,16 +9,19 @@ const httpOptions = {
     templateUrl: 'dashboard.component.html'
 })
 
-@NgModule({
-  imports: [
-    // import HttpClientModule after BrowserModule.
-    HttpClient,
-    HttpHeaders
-  ],
-})
-
 export class DashboardComponent implements OnInit {
 
+  dataToPrint = [];
+
+  constructor(private service: DataService) {
+  }
+
+  getData() {
+    this.service.getData().subscribe(data => data.forEach(object => {
+      this.dataToPrint.push(JSON.stringify(object));
+    }), error => console.log(error));
+    console.log(JSON.stringify(this.dataToPrint));
+  }
 
 
   public canvas : any;
@@ -80,6 +77,7 @@ export class DashboardComponent implements OnInit {
       });
     }
 }
+  
 
 
       // this.canvas = document.getElementById("chartEmail");
