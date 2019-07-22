@@ -4,15 +4,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
-import { DashboardComponent } from './dashboard/dashboard.component'
-import { HeaderComponent } from './header/header.component'
-import { DataService } from './dataService/dataService';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { DataService } from './data.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent,
-    HeaderComponent
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
